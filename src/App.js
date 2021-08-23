@@ -21,15 +21,7 @@ class App extends Component {
           </form>
 
           <ul className="todo-list">
-            <li className="todo">
-              <div className="todo-control">
-                <input type="checkbox" id="check-b" />
-                <label htmlFor="check-b">{todo[0].title}</label>
-                <button type="button" className="delele">
-                  delete
-                </button>
-              </div>
-            </li>
+           
           </ul>
         </div>
       </section>
