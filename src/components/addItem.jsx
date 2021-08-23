@@ -2,9 +2,9 @@
 import React from 'react';
 
 const Form = (props) => {
-  const { value, onChange } = props;
+  const { value, onChange, onSubmit } = props;
   return (
-    <form className="form">
+    <form onSubmit={onSubmit} className="form">
       <input
         onChange={onChange}
         type="text"

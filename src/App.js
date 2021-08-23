@@ -27,13 +27,22 @@ class App extends Component {
     this.setState({ inputs: cloneDinputs });
   };
 
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+  };
+
   render() {
     const { todos, inputs } = this.state;
     return (
       <section>
         <div className="main-container">
           <h1 className="todo-heading">Todos</h1>
-          <Form value={inputs} onChange={this.handelChange} />
+          <Form
+            value={inputs}
+            onChange={this.handelChange}
+            onSubmit={this.handleSubmit}
+          />
           <ul className="todo-list">
             {todos.map((atodo) => (
               <Todo key={atodo.id} todo={atodo} />
