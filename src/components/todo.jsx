@@ -2,13 +2,18 @@
 import React from 'react';
 
 const Todo = (props) => {
-  const { todo } = props;
+  const { todo, onChange } = props;
   return (
     <li className="todo">
       <div
         className={todo.completed ? 'todo-control completed' : 'todo-control'}
       >
-        <input type="checkbox" defaultChecked={todo.completed} id={todo.id} />
+        <input
+          onChange={onChange}
+          type="checkbox"
+          defaultChecked={todo.completed}
+          id={todo.id}
+        />
         <label htmlFor={todo.id}>{todo.title}</label>
         <button type="button" className="delele">
           delete

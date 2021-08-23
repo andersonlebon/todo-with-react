@@ -32,6 +32,15 @@ class App extends Component {
     console.log(this.state);
   };
 
+  handelCompleteTask = (e) => {
+    const currentIt = e.currentTarget.id;
+    const state = { ...this.state };
+    // eslint-disable-next-line eqeqeq
+    const task = state.todos.filter((todo) => todo.id == currentIt)[0];
+    task.completed = !task.completed;
+    this.setState(state);
+  };
+
   render() {
     const { todos, inputs } = this.state;
     return (
@@ -45,7 +54,11 @@ class App extends Component {
           />
           <ul className="todo-list">
             {todos.map((atodo) => (
-              <Todo key={atodo.id} todo={atodo} />
+              <Todo
+                key={atodo.id}
+                onChange={this.handelCompleteTask}
+                todo={atodo}
+              />
             ))}
           </ul>
         </div>
