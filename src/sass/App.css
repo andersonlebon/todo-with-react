@@ -88,6 +88,7 @@ section {
 
 .todo-list {
   margin: 20px 0;
+  width: 30%;
 }
 
 .todo-control {
@@ -124,6 +125,19 @@ section {
   outline: none;
 }
 
+.todo-control label {
+  margin-left: 5px;
+  width: 80%;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.completed label {
+  text-decoration: line-through;
+  font-style: italic;
+  font-weight: 100;
+}
+
 body {
   font-size: 13px;
   font-family: 'Roboto', sans-serif !important;
@@ -133,7 +147,6 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 30%;
 }
 
 li label {
