@@ -44,6 +44,13 @@ class App extends Component {
     this.setState(state);
   };
 
+  handleDelete = (id) => {
+    const state = { ...this.state };
+    // eslint-disable-next-line eqeqeq
+    const todos = state.todos.filter((todo) => todo.id !== id);
+    this.setState({ todos });
+  };
+
   render() {
     const { todos, inputs } = this.state;
     return (
@@ -61,6 +68,7 @@ class App extends Component {
                 key={atodo.id}
                 onChange={this.handelCompleteTask}
                 todo={atodo}
+                onDelete={this.handleDelete}
               />
             ))}
           </ul>

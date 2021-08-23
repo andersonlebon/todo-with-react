@@ -2,7 +2,7 @@
 import React from 'react';
 
 const Todo = (props) => {
-  const { todo, onChange } = props;
+  const { todo, onChange, onDelete } = props;
   return (
     <li className="todo">
       <div
@@ -15,7 +15,11 @@ const Todo = (props) => {
           id={todo.id}
         />
         <label htmlFor={todo.id}>{todo.title}</label>
-        <button type="button" className="delele">
+        <button
+          onClick={() => onDelete(todo.id)}
+          type="button"
+          className="delele"
+        >
           delete
         </button>
       </div>
