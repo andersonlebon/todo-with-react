@@ -3,17 +3,12 @@ import 'bootstrap';
 import Todo from './components/todo';
 import Form from './components/addItem';
 
+let todoId = 0;
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      todos: [
-        { id: 1, title: 'todo1', completed: false },
-        { id: 2, title: 'todo2', completed: false },
-        { id: 3, title: 'todo3', completed: true },
-        { id: 4, title: 'todo4', completed: true },
-        { id: 5, title: 'todo5', completed: false },
-      ],
+      todos: [],
       inputs: {
         newTodo: '',
       },
@@ -29,7 +24,15 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    const state = { ...this.state };
+    const todos = [...state.todos];
+    todos.push({
+      // eslint-disable-next-line no-plusplus
+      id: ++todoId,
+      title: state.inputs.newTodo,
+      completed: false,
+    });
+    this.setState({ todos });
   };
 
   handelCompleteTask = (e) => {
