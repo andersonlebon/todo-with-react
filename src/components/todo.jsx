@@ -1,17 +1,19 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-import Form from './addItem';
 
 const Todo = (props) => {
   const [showEditer, setEditor] = useState(false);
+  const [newInput, setInput] = useState('');
 
   const handelShow = () => {
-    // const id = parseInt(e.currentTarget.id, 10);
-    // const todo = todos.find((task) => task.id === id);
     console.log(showEditer);
     setEditor(true);
   };
-  const { todo, onChange, onDelete } = props;
+
+  const handleChange = ({ currentTarget: inputText }) => {
+    setInput(inputText.value);
+  };
+  const { todo, onChange, onDelete, onModify } = props;
   return (
     <li className={todo.completed ? 'todo-control completed' : 'todo-control'}>
       <input
@@ -27,13 +29,21 @@ const Todo = (props) => {
       >
         {todo.title}
       </label>
-      {/* <input
-        type="text"
-        className={showEditer ? 'd-flex' : 'd-none'}
-        placeholder="Modify"
-      /> */}
-
-      {showEditer ? <Form /> : null}
+      <div className={showEditer ? 'd-flex modify' : 'd-none modify'}>
+        <input
+          onChange={handleChange}
+          type="text"
+          value={newInput}
+          placeholder="Modify"
+        />
+        <button
+          onClick={onModify(newInput, todo.id)}
+          type="button"
+          className="submit"
+        >
+          modify
+        </button>
+      </div>
       <button
         onClick={() => onDelete(todo.id)}
         type="button"

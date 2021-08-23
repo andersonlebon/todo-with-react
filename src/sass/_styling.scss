@@ -46,6 +46,7 @@ section {
 
   button {
     // background-color:;
+    box-shadow: 1px 1px 7px 1px rgb(221, 220, 220);
     border: 1px solid rgb(170, 170, 170);
     background-color: white;
     margin-right: 0;
@@ -69,15 +70,17 @@ section {
 .todo-list {
   margin: 20px 0;
   width: 30%;
+  z-index: 1;
 }
 
 .todo-control {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 10px 0;
   margin: 10px 0;
   border-bottom: 1px solid rgb(170, 170, 170);
+  position: relative;
 
   .delele {
     font-size: 13px;
@@ -110,4 +113,19 @@ section {
   text-decoration: line-through;
   font-style: italic;
   font-weight: 100;
+}
+
+.modify {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -35%;
+  height: 70%;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  background-color: white;
+
+  @extend .form;
 }

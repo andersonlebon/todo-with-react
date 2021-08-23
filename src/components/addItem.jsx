@@ -2,7 +2,9 @@
 import React from 'react';
 
 const Form = (props) => {
-  const { value, onChange, onSubmit } = props;
+  const {
+    value, name, onChange, onSubmit,
+  } = props;
   return (
     <form
       onSubmit={onSubmit}
@@ -11,8 +13,9 @@ const Form = (props) => {
       <input
         onChange={onChange}
         type="text"
-        value={value.newTodo}
+        value={value}
         placeholder="Add todo..."
+        name={name}
       />
       <button type="submit">Submit</button>
     </form>

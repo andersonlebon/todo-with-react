@@ -11,6 +11,7 @@ class App extends Component {
       todos: [],
       inputs: {
         newTodo: '',
+        edite: '',
       },
     };
   }
@@ -18,9 +19,16 @@ class App extends Component {
   handelChange = (e) => {
     const { inputs } = this.state;
     const cloneDinputs = { ...inputs };
-    cloneDinputs.newTodo = e.currentTarget.value;
+    cloneDinputs[e.currentTarget.name] = e.currentTarget.value;
     this.setState({ inputs: cloneDinputs });
   };
+
+  // handelModidfy = ({ currentTarget: input }) => {
+  //    const { inputs } = this.state;
+  //    const cloneDinputs = { ...inputs };
+  //    cloneDinputs.newTodo = e.currentTarget.value;
+  //    this.setState({ inputs: cloneDinputs });
+  // };
 
   handleSubmit = (e) => {
     e.preventDefault();
@@ -49,6 +57,14 @@ class App extends Component {
     this.setState({ todos });
   };
 
+  handleModify = (inputText, id) => {
+    // const id = parseInt(e.currentTarget.id, 10);
+    const state = { ...this.state };
+    const todos = [state.todos];
+    const todo = todos.find((task) => task.id === id);
+    console.log(todo);
+  };
+
   render() {
     const { todos, inputs } = this.state;
     return (
@@ -56,13 +72,15 @@ class App extends Component {
         <div className="main-container">
           <h1 className="todo-heading">Todos</h1>
           <Form
-            value={inputs}
+            value={inputs.newTodo}
             onChange={this.handelChange}
             onSubmit={this.handleSubmit}
+            name="newTodo"
           />
           <ul className="todo-list">
             {todos.map((atodo) => (
               <Todo
+                onModify={this.handleModify}
                 key={atodo.id}
                 onChange={this.handelCompleteTask}
                 todo={atodo}
