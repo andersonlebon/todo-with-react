@@ -26,9 +26,9 @@ class App extends Component {
     e.preventDefault();
     const state = { ...this.state };
     const todos = [...state.todos];
+    todoId += 1;
     todos.push({
-      // eslint-disable-next-line no-plusplus
-      id: ++todoId,
+      id: todoId,
       title: state.inputs.newTodo,
       completed: false,
     });
@@ -36,25 +36,23 @@ class App extends Component {
   };
 
   handelCompleteTask = (e) => {
-    const currentIt = e.currentTarget.id;
+    const currentIt = parseInt(e.currentTarget.id, 10);
     const state = { ...this.state };
-    // eslint-disable-next-line eqeqeq
-    const task = state.todos.filter((todo) => todo.id == currentIt)[0];
+    const task = state.todos.filter((todo) => todo.id === currentIt)[0];
     task.completed = !task.completed;
     this.setState(state);
   };
 
   handleDelete = (id) => {
     const state = { ...this.state };
-    // eslint-disable-next-line eqeqeq
-    const todos = state.todos.filter((todo) => todo.id !== id);
+    const todos = state.todos.filter((todo) => todo.id !== parseInt(id, 10));
     this.setState({ todos });
   };
 
   render() {
     const { todos, inputs } = this.state;
     return (
-      <section>
+      <section className="container d-flex flex-column align-items-center">
         <div className="main-container">
           <h1 className="todo-heading">Todos</h1>
           <Form

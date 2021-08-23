@@ -1,0 +1,44 @@
+section {
+  height: 100vh;
+  padding-top: 3rem;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-heading {
+  font-size: 100px;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 20px 0;
+  color: rgba(78, 78, 78, 0.842);
+  opacity: 0.2;
+}
+
+.form {
+  box-shadow: 1px 1px 7px 1px rgb(221, 220, 220);
+  border-radius: 50px;
+  //   padding: 5;
+  width: 42%;
+
+  input {
+    border: none;
+    height: 100%;
+    margin-left: 7px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    // background-color: black;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: black;
+    }
+  }
+}
