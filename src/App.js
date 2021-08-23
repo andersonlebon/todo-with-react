@@ -23,13 +23,6 @@ class App extends Component {
     this.setState({ inputs: cloneDinputs });
   };
 
-  // handelModidfy = ({ currentTarget: input }) => {
-  //    const { inputs } = this.state;
-  //    const cloneDinputs = { ...inputs };
-  //    cloneDinputs.newTodo = e.currentTarget.value;
-  //    this.setState({ inputs: cloneDinputs });
-  // };
-
   handleSubmit = (e) => {
     e.preventDefault();
     const state = { ...this.state };
@@ -58,17 +51,17 @@ class App extends Component {
   };
 
   handleModify = (inputText, id) => {
-    // // const id = parseInt(e.currentTarget.id, 10);
     const state = { ...this.state };
     const todos = [...state.todos];
     const todo = todos.filter((task) => task.id === id)[0];
     todo.title = inputText;
     this.setState({ todos });
-    console.log(this.state);
   };
 
   render() {
     const { todos, inputs } = this.state;
+    console.log(todos);
+    const checkList = todos.length === 0 ? 'There is nothing to do in the todo-list...' : null;
     return (
       <section className="container d-flex flex-column align-items-center">
         <div className="main-container">
@@ -79,6 +72,11 @@ class App extends Component {
             onSubmit={this.handleSubmit}
             name="newTodo"
           />
+          <div className="counters">
+            <div className="countTask">{todos.length}</div>
+            <div className="countCompleted">{todos.length}</div>
+          </div>
+          <p className="checkList">{checkList}</p>
           <ul className="todo-list">
             {todos.map((atodo) => (
               <Todo
