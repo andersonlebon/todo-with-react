@@ -58,11 +58,13 @@ class App extends Component {
   };
 
   handleModify = (inputText, id) => {
-    // const id = parseInt(e.currentTarget.id, 10);
+    // // const id = parseInt(e.currentTarget.id, 10);
     const state = { ...this.state };
-    const todos = [state.todos];
-    const todo = todos.find((task) => task.id === id);
-    console.log(todo);
+    const todos = [...state.todos];
+    const todo = todos.filter((task) => task.id === id)[0];
+    todo.title = inputText;
+    this.setState({ todos });
+    console.log(this.state);
   };
 
   render() {

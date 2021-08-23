@@ -13,7 +13,16 @@ const Todo = (props) => {
   const handleChange = ({ currentTarget: inputText }) => {
     setInput(inputText.value);
   };
-  const { todo, onChange, onDelete, onModify } = props;
+
+  const {
+    todo, onChange, onDelete, onModify,
+  } = props;
+
+  const handleModify = () => {
+    setEditor(false);
+    onModify(newInput, todo.id);
+  };
+
   return (
     <li className={todo.completed ? 'todo-control completed' : 'todo-control'}>
       <input
@@ -36,11 +45,7 @@ const Todo = (props) => {
           value={newInput}
           placeholder="Modify"
         />
-        <button
-          onClick={onModify(newInput, todo.id)}
-          type="button"
-          className="submit"
-        >
+        <button onClick={() => handleModify()} type="button" className="submit">
           modify
         </button>
       </div>
