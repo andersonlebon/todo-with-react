@@ -5,9 +5,9 @@ const Todo = (props) => {
   const [showEditer, setEditor] = useState(false);
   const [newInput, setInput] = useState('');
 
-  const handelShow = () => {
-    console.log(showEditer);
+  const handelShow = (inputText) => {
     setEditor(true);
+    setInput(inputText);
   };
 
   const handleChange = ({ currentTarget: inputText }) => {
@@ -32,7 +32,7 @@ const Todo = (props) => {
         id={todo.id}
       />
       <label
-        onDoubleClick={() => handelShow()}
+        onDoubleClick={() => handelShow(todo.title)}
         aria-hidden="true"
         htmlFor={todo.id}
       >
