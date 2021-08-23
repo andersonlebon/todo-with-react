@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const Todo = (props) => {
@@ -5,8 +6,8 @@ const Todo = (props) => {
   return (
     <li className="todo">
       <div className="todo-control">
-        <input type="checkbox" id="check-b" />
-        <label htmlFor="check-b">{todo.title}</label>
+        <input type="checkbox" defaultChecked={todo.completed} id={todo.id} />
+        <label htmlFor={todo.id}>{todo.title}</label>
         <button type="button" className="delele">
           delete
         </button>
