@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 | Add new taks                                                                                                                                           | Modif a task                                                                                                                                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![andersonlebon github io_todo-with-react_ (1)](https://user-images.githubusercontent.com/65068771/130613253-a9477a2e-cf2d-4c17-917e-a1a7bac25c3d.png) | ![andersonlebon github io_todo-with-react_ (2)](https://user-images.githubusercontent.com/65068771/130613281-01b9b321-df1a-4fc4-87c7-7cf5a6c83f73.png) |
+| ![andersonlebon github io_todo-with-react_ (2)](https://user-images.githubusercontent.com/65068771/130613281-01b9b321-df1a-4fc4-87c7-7cf5a6c83f73.png) | ![andersonlebon github io_todo-with-react_ (1)](https://user-images.githubusercontent.com/65068771/130613253-a9477a2e-cf2d-4c17-917e-a1a7bac25c3d.png) |
 
 ## [Demo](https://andersonlebon.github.io/todo-with-react/)
 
