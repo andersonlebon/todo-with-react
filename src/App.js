@@ -60,11 +60,10 @@ class App extends Component {
 
   render() {
     const { todos, inputs } = this.state;
-    console.log(todos);
     const checkList = todos.length === 0 ? 'There is nothing to do in the todo-list...' : null;
-    const getCompleted = `${
-      todos.filter((task) => task.completed).length
-    }/${todos.length} `;
+    const getCompleted = `${todos.filter((task) => task.completed).length}/${
+      todos.length
+    } `;
     return (
       <section className="container d-flex flex-column align-items-center">
         <div className="main-container">
@@ -76,9 +75,7 @@ class App extends Component {
             </div>
             <div className="countCompleted">
               <h5>Tasks completed</h5>
-              <div className="count">
-                {getCompleted}
-              </div>
+              <div className="count">{getCompleted}</div>
             </div>
           </div>
           <Form

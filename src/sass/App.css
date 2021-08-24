@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,100;1,300;1,900&display=swap");
+/* stylelint-disable */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,900;1,100;1,300;1,900&display=swap');
 section {
   height: 100vh;
   padding-top: 3rem;
@@ -11,11 +12,11 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
 
@@ -28,19 +29,21 @@ section {
   opacity: 0.2;
 }
 
-.form, .modify {
+.form,
+.modify {
   -webkit-box-shadow: 1px 1px 7px 1px #dddcdc;
-          box-shadow: 1px 1px 7px 1px #dddcdc;
+  box-shadow: 1px 1px 7px 1px #dddcdc;
   border-radius: 50px;
   width: 35%;
   font-weight: 300;
 }
 
-.form input, .modify input {
+.form input,
+.modify input {
   border: none;
   height: 100%;
   width: 100%;
-  margin-left: 0px;
+  margin-left: 0;
   padding: 5px 20px;
   border-radius: 50px;
   font-size: 14px;
@@ -48,29 +51,35 @@ section {
   font-weight: 300;
 }
 
-.form input:focus, .modify input:focus {
+.form input:focus,
+.modify input:focus {
   outline: none;
 }
 
-.form input::-webkit-input-placeholder, .modify input::-webkit-input-placeholder {
+.form input::-webkit-input-placeholder,
+.modify input::-webkit-input-placeholder {
   color: black;
 }
 
-.form input:-ms-input-placeholder, .modify input:-ms-input-placeholder {
+.form input:-ms-input-placeholder,
+.modify input:-ms-input-placeholder {
   color: black;
 }
 
-.form input::-ms-input-placeholder, .modify input::-ms-input-placeholder {
+.form input::-ms-input-placeholder,
+.modify input::-ms-input-placeholder {
   color: black;
 }
 
-.form input::placeholder, .modify input::placeholder {
+.form input::placeholder,
+.modify input::placeholder {
   color: black;
 }
 
-.form button, .modify button {
+.form button,
+.modify button {
   -webkit-box-shadow: 1px 1px 7px 1px #dddcdc;
-          box-shadow: 1px 1px 7px 1px #dddcdc;
+  box-shadow: 1px 1px 7px 1px #dddcdc;
   border: 1px solid #aaaaaa;
   background-color: white;
   margin-right: 0;
@@ -82,11 +91,13 @@ section {
   padding: 0 15px;
 }
 
-.form button:hover, .modify button:hover {
+.form button:hover,
+.modify button:hover {
   cursor: pointer;
 }
 
-.form button:focus, .modify button:focus {
+.form button:focus,
+.modify button:focus {
   outline: none;
 }
 
@@ -101,11 +112,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 10px 0;
   margin: 10px 0;
   border-bottom: 1px solid #aaaaaa;
@@ -155,8 +166,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   z-index: 10;
   background-color: white;
 }
@@ -190,15 +201,15 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   left: 0;
 }
 
@@ -207,20 +218,20 @@ section {
   height: 50px;
   border-radius: 100%;
   -webkit-box-shadow: 1px 1px 7px 1px #dddcdc;
-          box-shadow: 1px 1px 7px 1px #dddcdc;
+  box-shadow: 1px 1px 7px 1px #dddcdc;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   text-align: center;
   font-weight: 400;
 }
@@ -233,15 +244,15 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   right: 0;
 }
 
