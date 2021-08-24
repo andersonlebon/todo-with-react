@@ -29,9 +29,10 @@ section {
   input {
     border: none;
     height: 100%;
-    margin-left: 7px;
-    padding: 5px 10px;
-    border-radius: 10px;
+    width: 100%;
+    margin-left: 0px;
+    padding: 5px 20px;
+    border-radius: 50px;
     font-size: 14px;
     font-family: 'Roboto', sans-serif !important;
     font-weight: 300;
@@ -141,6 +142,16 @@ section {
   margin-bottom: 5px;
 }
 
+@mixin task {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .counters {
   position: relative;
   background: chartreuse;
@@ -149,18 +160,12 @@ section {
   h5 {
     font-size: 14px;
     width: 50px;
-
   }
 
   .countTask {
-    position: absolute;
+    @include task();
+
     left: 0;
-    text-align: center;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
 
   .count {
@@ -174,18 +179,11 @@ section {
     flex-direction: column;
     text-align: center;
     font-weight: 400;
-
   }
 
   .countCompleted {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+    @include task();
 
+    right: 0;
   }
 }

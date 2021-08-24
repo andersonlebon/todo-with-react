@@ -39,9 +39,10 @@ section {
 .form input, .modify input {
   border: none;
   height: 100%;
-  margin-left: 7px;
-  padding: 5px 10px;
-  border-radius: 10px;
+  width: 100%;
+  margin-left: 0px;
+  padding: 5px 20px;
+  border-radius: 50px;
   font-size: 14px;
   font-family: 'Roboto', sans-serif !important;
   font-weight: 300;
@@ -183,7 +184,6 @@ section {
 
 .counters .countTask {
   position: absolute;
-  left: 0;
   text-align: center;
   bottom: 0;
   display: -webkit-box;
@@ -192,13 +192,14 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
 }
 
 .counters .count {
@@ -226,7 +227,7 @@ section {
 
 .counters .countCompleted {
   position: absolute;
-  right: 0;
+  text-align: center;
   bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,14 +235,14 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
 }
 
 body {
