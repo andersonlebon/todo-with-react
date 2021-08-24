@@ -62,20 +62,31 @@ class App extends Component {
     const { todos, inputs } = this.state;
     console.log(todos);
     const checkList = todos.length === 0 ? 'There is nothing to do in the todo-list...' : null;
+    const getCompleted = todos.filter((task) => task.completed);
     return (
       <section className="container d-flex flex-column align-items-center">
         <div className="main-container">
           <h1 className="todo-heading">Todos</h1>
+          <div className="counters d-flex align-items-center">
+            <div className="countTask">
+              <h5>All tasks</h5>
+              <div className="count">{todos.length}</div>
+            </div>
+            <div className="countCompleted">
+              <h5>Tasks completed</h5>
+              <div className="count">
+                {getCompleted.length}
+                /
+                {todos.length}
+              </div>
+            </div>
+          </div>
           <Form
             value={inputs.newTodo}
             onChange={this.handelChange}
             onSubmit={this.handleSubmit}
             name="newTodo"
           />
-          <div className="counters">
-            <div className="countTask">{todos.length}</div>
-            <div className="countCompleted">{todos.length}</div>
-          </div>
           <p className="checkList">{checkList}</p>
           <ul className="todo-list">
             {todos.map((atodo) => (

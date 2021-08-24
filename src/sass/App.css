@@ -16,6 +16,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .todo-heading {
@@ -167,6 +168,80 @@ section {
   font-size: 16px;
   font-style: italic;
   margin-bottom: 5px;
+}
+
+.counters {
+  position: relative;
+  background: chartreuse;
+  width: 50%;
+}
+
+.counters h5 {
+  font-size: 14px;
+  width: 50px;
+}
+
+.counters .countTask {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.counters .count {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  -webkit-box-shadow: 1px 1px 7px 1px #dddcdc;
+          box-shadow: 1px 1px 7px 1px #dddcdc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-weight: 400;
+}
+
+.counters .countCompleted {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 body {
