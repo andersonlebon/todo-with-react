@@ -18,40 +18,32 @@ This project is build with:
 
 ## Getting Started
 
-To get the content of this project locally you need to run this command in your terminal:
+To get the content of this project locally you need to run these commands in your terminal:
 
-- `git clone https://github.com/andersonlebon/todo-with-react.git`
-- `cd todo-with-react`
-- Use `npm start` to run the app in live server
+- `git clone https://github.com/andersonlebon/todo-with-react.git`;
+- `cd todo-with-react`;
+-  `npm install` This command will download all dependancies of the project;
+- Use `npm start` to run the app in live server.
 
 ## Test
 
 For tracking linter errors locally you need to follow these steps:
 
-- After cloning the project you need to run this command
-
-  > `npm install`
-  > This command will download all the dependancies of the project
-
-- For tracking the linter errors in HTML file run:
-
-  > `npx hint .`
-
-- For tracking the linter errors in CSS file run:
+- For tracking the linter errors in CSS and SASS files run:
 
   > `npx stylelint "\*_/_.{css,scss}"`
 
-- And For tracking the linter errors in JavaScript file run:
+- And For tracking linter errors in JavaScript files run:
 
   > `npx eslint .`
 
-- Use `npm run build` to run the app in live server
+- Use `npm run build`to build the production code for deploying
 
 ## Author
 
 👤 **Anderson Caleb**
 
-- GitHub: [@Anhersonlebon](https://github.com/andersonlebon)
+- GitHub: [@Andersonlebon](https://github.com/andersonlebon)
 - Twitter: [@BuyananaCaleb](https://twitter.com/BuyananaCaleb)
 - LinkedIn: [Anderson Caleb](https://www.linkedin.com/in/anderson-caleb-915343209/)
 
